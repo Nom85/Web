@@ -9,8 +9,8 @@
   .map-pin { fill: #00d4aa; stroke: #ffffff; stroke-width: 2.5; }
   .map-location:hover .map-pin-ring { opacity: 0.8; }
   .map-location:hover .map-pin { fill: #00ffcc; }
-  .map-label { fill: #4a6a8a; font-family: system-ui, sans-serif; font-size: 13px; text-anchor: middle; }
-  .map-route { fill: none; stroke: #00d4aa; stroke-width: 1; opacity: 0.25; stroke-dasharray: 6,4; }
+  .map-label { fill: #4a6a8a; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; text-anchor: middle; }
+  .map-route { fill: none; stroke: #00d4aa; stroke-width: 2; opacity: 0.6; stroke-dasharray: 8,5; }
 </style>
 
 <!-- Ocean fill -->
@@ -13156,78 +13156,65 @@
     <polyline class="map-coast" points="614.4,144.2 615.3,143.8 615,144.2 "/>
     <polyline class="map-coast" points="610.7,144.2 610.3,143.8 608.8,143.2 608.1,142.5 607.6,142.7 606,143.5 605.1,143.6 604.4,144.2 "/>
 
-<!-- Expedition route lines -->
-<path class="map-route" d="M 577 495 Q 540 540 505 590"/>
-<path class="map-route" d="M 505 590 Q 590 500 682 418"/>
-<path class="map-route" d="M 682 418 Q 655 395 625 370"/>
-<path class="map-route" d="M 625 370 Q 645 358 665 348"/>
-<path class="map-route" d="M 665 348 Q 655 300 640 255"/>
-<path class="map-route" d="M 620 455 Q 600 478 577 495"/>
 
-<!-- Spain - Alcora, Castellon -->
+
+
+
+<!-- 1. Madeira -->
 <g class="map-location">
-  <circle class="map-pin-ring" cx="577" cy="495" r="14"/>
-  <circle class="map-pin" cx="577" cy="495" r="6"/>
-  <text class="map-label" x="577" y="520">Spain</text>
-  <title>Spain - Alcora, Castellon | Marine Biology &amp; Fisheries Research</title>
+  <circle class="map-pin-ring" cx="530" cy="630" r="14"/>
+  <circle class="map-pin" cx="530" cy="630" r="6"/>
+  <title>Portugal - Madeira | Cetacean Field Operations &amp; Marine Biotechnology</title>
 </g>
 
-<!-- Portugal - Faro -->
+<!-- 2. Portugal - Faro y Aveiro -->
 <g class="map-location">
-  <circle class="map-pin-ring" cx="565" cy="525" r="14"/>
-  <circle class="map-pin" cx="565" cy="525" r="6"/>
-  <text class="map-label" x="565" y="550">Portugal</text>
-  <title>Portugal - Faro | Coastal Oceanography Campaign</title>
+  <circle class="map-pin-ring" cx="560" cy="580" r="14"/>
+  <circle class="map-pin" cx="560" cy="580" r="6"/>
+  <title>Portugal - Aveiro &amp; Faro | Marine mammals rescue and Marine Biotechnology projects</title>
 </g>
 
-<!-- Portugal - Madeira -->
+<!-- 3. España - Cabanes y Calpe -->
 <g class="map-location">
-  <circle class="map-pin-ring" cx="505" cy="590" r="14"/>
-  <circle class="map-pin" cx="505" cy="590" r="6"/>
-  <text class="map-label" x="505" y="615">Madeira</text>
-  <title>Madeira | Deep-sea Coral &amp; Benthic Survey Expedition</title>
+  <circle class="map-pin-ring" cx="590" cy="580" r="14"/>
+  <circle class="map-pin" cx="590" cy="580" r="6"/>
+  <title>Spain - Cabanes &amp; Calpe | Multidisciplinary Oceanographic Surveys</title>
 </g>
 
-<!-- Belgium - Ghent -->
+<!-- 4. Francia - Niza -->
 <g class="map-location">
-  <circle class="map-pin-ring" cx="625" cy="370" r="14"/>
-  <circle class="map-pin" cx="625" cy="370" r="6"/>
-  <text class="map-label" x="625" y="395">Belgium</text>
-  <title>Belgium - Ghent | Marine Biology Master&apos;s</title>
+  <circle class="map-pin-ring" cx="590" cy="545" r="14"/>
+  <circle class="map-pin" cx="590" cy="545" r="6"/>
+  <title>France - Nice | Marine Biodiversity Census in Lérins Islands</title>
 </g>
 
-<!-- Germany - Berlin -->
+<!-- 5. Belgica - Ghent -->
 <g class="map-location">
-  <circle class="map-pin-ring" cx="665" cy="348" r="14"/>
-  <circle class="map-pin" cx="665" cy="348" r="6"/>
-  <text class="map-label" x="665" y="373">Germany</text>
-  <title>Germany - Berlin | Startup &amp; Biotech Research</title>
+  <circle class="map-pin-ring" cx="610" cy="530" r="14"/>
+  <circle class="map-pin" cx="610" cy="530" r="6"/>
+  <title>Belgium - Ghent | Marine Biotechnology Research</title>
 </g>
 
-<!-- Sweden - Tjarno -->
+<!-- 6. Alemania - Berlin -->
 <g class="map-location">
-  <circle class="map-pin-ring" cx="640" cy="255" r="14"/>
-  <circle class="map-pin" cx="640" cy="255" r="6"/>
-  <text class="map-label" x="640" y="235">Sweden</text>
-  <title>Sweden - Tjarno Marine Laboratory | Benthic Biodiversity Expedition</title>
+  <circle class="map-pin-ring" cx="625" cy="530" r="14"/>
+  <circle class="map-pin" cx="625" cy="530" r="6"/>
+  <title>Germany - Berlin | Startup &amp; Marine Biotech Research</title>
 </g>
 
-<!-- France - Lerins -->
+<!-- 7. Suecia - Tjärnö -->
 <g class="map-location">
-  <circle class="map-pin-ring" cx="682" cy="418" r="14"/>
-  <circle class="map-pin" cx="682" cy="418" r="6"/>
-  <text class="map-label" x="682" y="443">France</text>
-  <title>France - Iles de Lerins | Posidonia Oceanica Conservation</title>
+  <circle class="map-pin-ring" cx="625" cy="480" r="14"/>
+  <circle class="map-pin" cx="625" cy="480" r="6"/>
+  <title>Sweden - Tjärnö | Benthic Biodiversity Expedition</title>
 </g>
+
+<!-- Route lines connecting points -->
+<path class="map-route" d="M 590 580 L 560 580 L 530 630 L 610 530 L 625 480 L 590 545 L 625 530"/>
 
 <!-- Legend -->
 <g transform="translate(50, 1600)">
-  <circle cx="10" cy="-5" r="6" fill="none" stroke="#00d4aa" stroke-width="2"/>
-  <circle cx="10" cy="-5" r="3" fill="#00d4aa"/>
-  <text x="25" y="-2" fill="#4a6a8a" font-family="system-ui,sans-serif" font-size="13">Field location</text>
-  <line x1="120" y1="-5" x2="155" y2="-5" stroke="#00d4aa" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
-  <text x="165" y="-2" fill="#4a6a8a" font-family="system-ui,sans-serif" font-size="13">Expedition route</text>
-  <text x="310" y="-2" fill="#4a6a8a" font-family="system-ui,sans-serif" font-size="13">6 countries - 8+ research locations</text>
+  <text x="10" y="-2" fill="#4a6a8a" font-family="system-ui,sans-serif" font-size="13">7 locations - 6 countries</text>
 </g>
 
 <script type="text/javascript"><![CDATA[
@@ -13241,11 +13228,11 @@
     tooltip.style.display = 'none';
 
     tooltipBg = document.createElementNS(NS, 'rect');
-    tooltipBg.setAttribute('rx', '8');
-    tooltipBg.setAttribute('ry', '8');
+tooltipBg.setAttribute('rx', '12');
+    tooltipBg.setAttribute('ry', '12');
     tooltipBg.setAttribute('fill', '#0d1b2a');
-    tooltipBg.setAttribute('stroke', 'rgba(0,180,216,0.4)');
-    tooltipBg.setAttribute('stroke-width', '1');
+    tooltipBg.setAttribute('stroke', '#1b3a5c');
+    tooltipBg.setAttribute('stroke-width', '1.5');
     tooltipBg.setAttribute('opacity', '0.95');
 
     tooltipTitle = document.createElementNS(NS, 'text');
@@ -13253,29 +13240,29 @@
     tooltipTitle.setAttribute('font-family', 'system-ui,sans-serif');
     tooltipTitle.setAttribute('font-size', '15');
     tooltipTitle.setAttribute('font-weight', '600');
-    tooltipTitle.setAttribute('x', '15');
-    tooltipTitle.setAttribute('y', '25');
+    tooltipTitle.setAttribute('x', '25');
+    tooltipTitle.setAttribute('y', '45');
 
     tooltipSub = document.createElementNS(NS, 'text');
     tooltipSub.setAttribute('fill', '#00b4d8');
     tooltipSub.setAttribute('font-family', 'system-ui,sans-serif');
-    tooltipSub.setAttribute('font-size', '12');
-    tooltipSub.setAttribute('x', '15');
-    tooltipSub.setAttribute('y', '45');
+    tooltipSub.setAttribute('font-size', '20');
+    tooltipSub.setAttribute('x', '25');
+    tooltipSub.setAttribute('y', '78');
 
     tooltipDesc = document.createElementNS(NS, 'text');
     tooltipDesc.setAttribute('fill', '#bbb');
     tooltipDesc.setAttribute('font-family', 'system-ui,sans-serif');
-    tooltipDesc.setAttribute('font-size', '11');
-    tooltipDesc.setAttribute('x', '15');
-    tooltipDesc.setAttribute('y', '68');
+    tooltipDesc.setAttribute('font-size', '18');
+    tooltipDesc.setAttribute('x', '25');
+    tooltipDesc.setAttribute('y', '120');
 
     tooltipClose = document.createElementNS(NS, 'text');
     tooltipClose.setAttribute('fill', '#4a6a8a');
     tooltipClose.setAttribute('font-family', 'system-ui,sans-serif');
-    tooltipClose.setAttribute('font-size', '16');
-    tooltipClose.setAttribute('x', '265');
-    tooltipClose.setAttribute('y', '22');
+    tooltipClose.setAttribute('font-size', '26');
+    tooltipClose.setAttribute('x', '445');
+    tooltipClose.setAttribute('y', '38');
     tooltipClose.setAttribute('cursor', 'pointer');
     tooltipClose.textContent = '\u2716';
 
@@ -13308,8 +13295,8 @@
     tooltipSub.textContent = place;
     tooltipDesc.textContent = description;
 
-    var tw = 280;
-    var th = 90;
+    var tw = 480;
+    var th = 160;
 
     tooltipBg.setAttribute('width', tw);
     tooltipBg.setAttribute('height', th);

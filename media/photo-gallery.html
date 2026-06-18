@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery — Fran Nomdedeu</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .gallery-section {
+      margin-bottom: 3rem;
+    }
+    .gallery-title {
+      font-size: 1.3rem;
+      color: #0b3c5d;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid #00b4d8;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-item {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      background: #f0f0f0;
+      cursor: pointer;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-item-label {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.78rem;
+      color: #555;
+      background: #fff;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.92);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      color: #fff;
+      font-size: 2.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 3rem;
+      cursor: pointer;
+      padding: 1rem;
+      user-select: none;
+    }
+    .lightbox-prev { left: 1rem; }
+    .lightbox-next { right: 1rem; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="../index/index.html" class="logo">Fran Nomdedeu</a>
+      <ul class="nav-links" id="navLinks">
+        
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../expeditions/expeditions.html">Expeditions</a></li>
+        <li><a href="../projects/projects.html">Projects</a></li>
+        <li><a href="media.html">Field Stories</a></li>
+        <li><a href="../cv/cv.html">Professional Profile</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:7rem;">
+    <div class="container">
+      <h2 class="section-title">Photo Gallery</h2>
+      <p class="story-intro">
+        Photo gallery from Madeira Cetacean Field Operations — species, fieldwork and moments from the expedition.
+      </p>
+
+      <!-- Sperm Whales -->
+      <div class="gallery-section">
+        <h3 class="gallery-title"><i class="fas fa-water"></i> <em>Physeter macrocephalus</em> — Sperm Whale</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%2011.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 11</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%2012.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 12</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%2013.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 13</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%2014.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 14</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%201%20falta%20edicion.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 1</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%202%20falta%20editar.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 2</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%203%20falta%20editar.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 3</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%204%20falta%20editar.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 4</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%205%20falta%20editar.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 5</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%206%20falta%20editar.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 6</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%207%20falta%20editar.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 7</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%208%20falta%20editar.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 8</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%209%20falta%20editar.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 9</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%2010%20falta%20editar.JPG" alt="Physeter macrocephalus"><div class="gallery-item-label"><em>Physeter macrocephalus</em> 10</div></div>
+        </div>
+      </div>
+
+      <!-- Striped Dolphin -->
+      <div class="gallery-section">
+        <h3 class="gallery-title"><i class="fas fa-water"></i> <em>Stenella coeruleoalba</em> — Striped Dolphin</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Stenella%20coeruleoalba%201.JPG" alt="Stenella coeruleoalba"><div class="gallery-item-label"><em>Stenella coeruleoalba</em> 1</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Stenella%20coeruleoalba%202.jpg" alt="Stenella coeruleoalba"><div class="gallery-item-label"><em>Stenella coeruleoalba</em> 2</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Stenella%20coeruleoalba%203.JPG" alt="Stenella coeruleoalba"><div class="gallery-item-label"><em>Stenella coeruleoalba</em> 3</div></div>
+        </div>
+      </div>
+
+      <!-- Pilot Whale -->
+      <div class="gallery-section">
+        <h3 class="gallery-title"><i class="fas fa-water"></i> <em>Globicephala melas</em> — Pilot Whale</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Globicephala%20melas%202.JPG" alt="Globicephala melas"><div class="gallery-item-label"><em>Globicephala melas</em> 2</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Globicephala%20melas%203.JPG" alt="Globicephala melas"><div class="gallery-item-label"><em>Globicephala melas</em> 3</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Globicephala%20melas%203%20lejos.JPG" alt="Globicephala melas"><div class="gallery-item-label"><em>Globicephala melas</em> 3 Far</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Globicephala%20melas%204.JPG" alt="Globicephala melas"><div class="gallery-item-label"><em>Globicephala melas</em> 4</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Globicephala%20melas%205.JPG" alt="Globicephala melas"><div class="gallery-item-label"><em>Globicephala melas</em> 5</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Globicephala%20melas%206.JPG" alt="Globicephala melas"><div class="gallery-item-label"><em>Globicephala melas</em> 6</div></div>
+        </div>
+      </div>
+
+      <!-- Bottlenose Dolphin -->
+      <div class="gallery-section">
+        <h3 class="gallery-title"><i class="fas fa-water"></i> <em>Tursiops truncatus</em> — Bottlenose Dolphin</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Tursiops%20truncatus%201.JPG" alt="Tursiops truncatus"><div class="gallery-item-label"><em>Tursiops truncatus</em> 1</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/delfin%202.JPG" alt="Tursiops truncatus"><div class="gallery-item-label"><em>Tursiops truncatus</em> 2</div></div>
+        </div>
+      </div>
+
+      <!-- False Killer Whale -->
+      <div class="gallery-section">
+        <h3 class="gallery-title"><i class="fas fa-water"></i> <em>Pseudorca crassidens</em> — False Killer Whale</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Pseudorca%20crassidens%201.JPG" alt="Pseudorca crassidens"><div class="gallery-item-label"><em>Pseudorca crassidens</em></div></div>
+        </div>
+      </div>
+
+      <!-- Rough-toothed Dolphin -->
+      <div class="gallery-section">
+        <h3 class="gallery-title"><i class="fas fa-water"></i> <em>Steno bredanensis</em> — Rough-toothed Dolphin</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Steno%20bredanensis%201.JPG" alt="Steno bredanensis"><div class="gallery-item-label"><em>Steno bredanensis</em> 1</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Steno%20bredanensis%202.JPG" alt="Steno bredanensis"><div class="gallery-item-label"><em>Steno bredanensis</em> 2</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Steno%20bredanensis%203.JPG" alt="Steno bredanensis"><div class="gallery-item-label"><em>Steno bredanensis</em> 3</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/delfin%201.JPG" alt="Steno bredanensis"><div class="gallery-item-label"><em>Steno bredanensis</em> 4</div></div>
+        </div>
+      </div>
+
+      <!-- Atlantic Spotted Dolphin -->
+      <div class="gallery-section">
+        <h3 class="gallery-title"><i class="fas fa-water"></i> <em>Stenella frontalis</em> — Atlantic Spotted Dolphin</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Stenella%20frontalis%201.JPG" alt="Stenella frontalis"><div class="gallery-item-label"><em>Stenella frontalis</em></div></div>
+        </div>
+      </div>
+
+      <!-- Cuvier's Beaked Whale -->
+      <div class="gallery-section">
+        <h3 class="gallery-title"><i class="fas fa-water"></i> <em>Ziphius cavirostris</em> — Cuvier's Beaked Whale</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Ziphius%20cavirostris%201.JPG" alt="Ziphius cavirostris"><div class="gallery-item-label"><em>Ziphius cavirostris</em> 1</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Ziphius%20cavirostris%202.JPG" alt="Ziphius cavirostris"><div class="gallery-item-label"><em>Ziphius cavirostris</em> 2</div></div>
+        </div>
+      </div>
+
+      <!-- Loggerhead Turtle -->
+      <div class="gallery-section">
+        <h3 class="gallery-title"><i class="fas fa-water"></i> <em>Caretta caretta</em> — Loggerhead Turtle</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Caretta%20caretta%201.JPG" alt="Caretta caretta"><div class="gallery-item-label"><em>Caretta caretta</em> 1</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/Caretta%20caretta%202.JPG" alt="Caretta caretta"><div class="gallery-item-label"><em>Caretta caretta</em> 2</div></div>
+        </div>
+      </div>
+
+      <!-- Fieldwork -->
+      <div class="gallery-section">
+        <h3 class="gallery-title"><i class="fas fa-camera"></i> Fieldwork & Equipment</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/GPS.JPG" alt="GPS Equipment"><div class="gallery-item-label">GPS Equipment</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/muestras%20biologicas%201.JPG" alt="Biological Samples"><div class="gallery-item-label">Biological Samples 1</div></div>
+          <div class="gallery-item"><img src="../Fotos/Madeira%20cetaceos/muestras%20biologicas%202.JPG" alt="Biological Samples"><div class="gallery-item-label">Biological Samples 2</div></div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="../expeditions/expeditions.html" class="btn">← Back to Expeditions</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Fran Nomdedeu · Marine Scientist · Expedition Operations · Blue Biotechnology</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <span class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</span>
+    <img src="" alt="" id="lightboxImg">
+    <span class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</span>
+  </div>
+
+  <script src="../script.js"></script>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const items = Array.from(document.querySelectorAll('.gallery-item img'));
+    let current = 0;
+
+    function showImage(idx) {
+      current = idx;
+      lightboxImg.src = items[current].src.replace(/ /g,'%20');
+      lightboxImg.alt = items[current].alt;
+    }
+
+    items.forEach((img, i) => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showImage(i);
+        lightbox.classList.add('active');
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+    lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); showImage((current - 1 + items.length) % items.length); });
+    lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); showImage((current + 1) % items.length); });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') lightbox.classList.remove('active');
+      if (e.key === 'ArrowLeft') showImage((current - 1 + items.length) % items.length);
+      if (e.key === 'ArrowRight') showImage((current + 1) % items.length);
+    });
+  </script>
+</body>
+</html>

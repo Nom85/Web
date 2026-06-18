@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghent Project Images | Fran Nomdedeu</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { padding-top: 80px; background: #0a1628; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+    h1 { color: #fff; font-size: 2rem; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 2px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+    .gallery-item { border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.3s; }
+    .gallery-item:hover { transform: scale(1.03); }
+    .gallery-item img { width: 100%; height: 250px; object-fit: cover; display: block; }
+    .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; object-fit: contain; }
+    .lightbox-close { position: absolute; top: 1rem; right: 1.5rem; color: #fff; font-size: 2.5rem; cursor: pointer; }
+    .lightbox-nav { position: absolute; color: #fff; font-size: 2rem; cursor: pointer; padding: 1rem; }
+    .lightbox-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+    .lightbox-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+    .back-link { color: #00d4aa; text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+    .back-link:hover { color: #fff; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="../index/index.html" class="logo">Fran Nomdedeu</a>
+      <ul class="nav-links" id="navLinks">
+        
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../expeditions/expeditions.html">Expeditions</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="../cv/cv.html">Professional Profile</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <a href="projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+    <h1>Zilt – Algae Cultivation Systems</h1>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="../Fotos/Ghent/Ghent%20algas%201.jpeg" alt="Ghent algas 1" data-full="../Fotos/Ghent/Ghent%20algas%201.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Ghent%20algas%202.jpeg" alt="Ghent algas 2" data-full="../Fotos/Ghent/Ghent%20algas%202.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Ghent%20algas%203.jpeg" alt="Ghent algas 3" data-full="../Fotos/Ghent/Ghent%20algas%203.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Ghent%20algas%204.jpeg" alt="Ghent algas 4" data-full="../Fotos/Ghent/Ghent%20algas%204.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Ghent%20algas%205.jpeg" alt="Ghent algas 5" data-full="../Fotos/Ghent/Ghent%20algas%205.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Ghent%20algas%206.jpeg" alt="Ghent algas 6" data-full="../Fotos/Ghent/Ghent%20algas%206.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Ghent%20algas%207.jpeg" alt="Ghent algas 7" data-full="../Fotos/Ghent/Ghent%20algas%207.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Ghent%20algas%208.jpeg" alt="Ghent algas 8" data-full="../Fotos/Ghent/Ghent%20algas%208.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Acuarios%20ghent%201.jpeg" alt="Acuarios ghent 1" data-full="../Fotos/Ghent/Acuarios%20ghent%201.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Acuarios%20ghent%202.jpeg" alt="Acuarios ghent 2" data-full="../Fotos/Ghent/Acuarios%20ghent%202.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Acuarios%20ghent%203.jpeg" alt="Acuarios ghent 3" data-full="../Fotos/Ghent/Acuarios%20ghent%203.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Acuarios%20ghent%204.jpeg" alt="Acuarios ghent 4" data-full="../Fotos/Ghent/Acuarios%20ghent%204.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Acuarios%20ghent%205.jpeg" alt="Acuarios ghent 5" data-full="../Fotos/Ghent/Acuarios%20ghent%205.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Lab%20ghent%201.jpeg" alt="Lab ghent 1" data-full="../Fotos/Ghent/Lab%20ghent%201.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Artemia%20ghent%201.jpeg" alt="Artemia ghent 1" data-full="../Fotos/Ghent/Artemia%20ghent%201.jpeg"></div>
+      <div class="gallery-item"><img src="../Fotos/Ghent/Artemia%20ghent%202.jpeg" alt="Artemia ghent 2" data-full="../Fotos/Ghent/Artemia%20ghent%202.jpeg"></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <span class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</span>
+    <img src="" alt="" id="lightboxImg">
+    <span class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</span>
+  </div>
+
+  <script>
+    (function() {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lightboxPrev = document.getElementById('lightboxPrev');
+      const lightboxNext = document.getElementById('lightboxNext');
+      let items = [];
+      let current = 0;
+
+      document.querySelectorAll('.gallery-item img').forEach(el => {
+        el.addEventListener('click', function() {
+          items = Array.from(document.querySelectorAll('.gallery-item img')).map(t => ({ src: t.dataset.full || t.src, alt: t.alt }));
+          current = items.findIndex(i => i.src === (this.dataset.full || this.src));
+          lightboxImg.src = items[current].src.replace(/ /g,'%20');
+          lightboxImg.alt = items[current].alt;
+          lightbox.classList.add('active');
+        });
+      });
+
+      lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+      lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+      lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); current = (current - 1 + items.length) % items.length; lightboxImg.src = items[current].src.replace(/ /g,'%20'); lightboxImg.alt = items[current].alt; });
+      lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); current = (current + 1) % items.length; lightboxImg.src = items[current].src.replace(/ /g,'%20'); lightboxImg.alt = items[current].alt; });
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') lightbox.classList.remove('active');
+        if (e.key === 'ArrowLeft') { current = (current - 1 + items.length) % items.length; lightboxImg.src = items[current].src.replace(/ /g,'%20'); lightboxImg.alt = items[current].alt; }
+        if (e.key === 'ArrowRight') { current = (current + 1) % items.length; lightboxImg.src = items[current].src.replace(/ /g,'%20'); lightboxImg.alt = items[current].alt; }
+      });
+    })();
+  </script>
+</body>
+</html>

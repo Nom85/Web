@@ -6,6 +6,76 @@
   <title>Field Stories | Fran Nomdedeu</title>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .slideshow-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      border-radius: 12px;
+    }
+    .slideshow-container img.active {
+      opacity: 1;
+    }
+    .slideshow-dots {
+      position: absolute;
+      bottom: 0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.4rem;
+    }
+    .slideshow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      cursor: pointer;
+    }
+    .slideshow-dot.active {
+      background: #fff;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.92);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+    .lightbox-close, .lightbox-nav {
+      position: absolute;
+      color: #fff;
+      cursor: pointer;
+      font-size: 2rem;
+      padding: 1rem;
+      user-select: none;
+    }
+    .lightbox-close { top: 1rem; right: 1.5rem; font-size: 2.5rem; }
+    .lightbox-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+    .lightbox-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+  </style>
 </head>
 <body>
 
@@ -18,7 +88,7 @@
 
       <ul class="nav-links" id="navLinks">
 
-        <li><a href="../index/index.html">Home</a></li>
+        
 
         <li><a href="../about/about.html">About</a></li>
 
@@ -26,7 +96,7 @@
 
         <li><a href="../projects/projects.html">Projects</a></li>
 
-        <li><a href="media.html">Field Stories</a></li>
+        
 
         <li><a href="../cv/cv.html">Professional Profile</a></li>
 
@@ -67,17 +137,14 @@
           <p>The work combined boat-based surveys, photo-identification campaigns, biological sampling and laboratory support activities. These expeditions provided a unique opportunity to understand how scientific fieldwork operates in real marine environments where weather, logistics and timing continuously shape decision-making.</p>
           <p>Beyond data collection, the experience strengthened my understanding of teamwork, operational planning and the connection between marine conservation and applied research.</p>
           <div class="story-links">
-            <a href="#" class="story-link"><i class="fas fa-file-alt"></i> Reports</a>
-            <a href="#" class="story-link story-link-outline"><i class="fas fa-book-open"></i> Publications</a>
-          </div>
+            </div>
         </div>
         <div class="story-media">
-          <div class="story-image-placeholder">
-            <span class="placeholder-text"><i class="fas fa-images"></i> Image gallery</span>
-          </div>
-          <div class="story-image-placeholder">
-            <span class="placeholder-text"><i class="fas fa-dolphin"></i> Cetacean photo-ID</span>
-          </div>
+          <a href="photo-gallery.html" style="display:block; text-decoration:none;">
+            <div class="story-image-placeholder" style="cursor:pointer;">
+              <img src="../Fotos/Madeira%20cetaceos/Physeter%20macrocephalus%2013.JPG" alt="Photo Gallery" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -98,66 +165,37 @@
           <p>Working in a multidisciplinary environment required balancing field logistics, laboratory processing and scientific objectives while adapting to changing conditions.</p>
           <p>The expedition culminated in a scientific presentation and a short documentary video summarizing the project and its findings.</p>
           <div class="story-links">
-            <a href="#" class="story-link"><i class="fas fa-video"></i> Watch Documentary</a>
-            <a href="#" class="story-link story-link-outline"><i class="fas fa-file-alt"></i> Project Report</a>
-            <a href="#" class="story-link story-link-outline"><i class="fas fa-book-open"></i> Publications</a>
+            <a href="https://www.youtube.com/watch?v=yud8Hd4-QeY" target="_blank" class="story-link"><i class="fas fa-video"></i> Watch Documentary</a>
+            <a href="../Fotos/Tjarno/Team_3_presentation.pptx%20(1).pdf" target="_blank" class="story-link story-link-outline"><i class="fas fa-file-alt"></i> Project Report</a>
           </div>
         </div>
         <div class="story-media">
-          <div class="story-video-placeholder">
-            <i class="fas fa-play-circle"></i>
-            <span>Expedition documentary video</span>
-          </div>
-          <div class="story-media-grid">
-            <div class="story-image-placeholder">
-              <span class="placeholder-text"><i class="fas fa-water"></i> Field sampling</span>
+          <a href="https://www.youtube.com/watch?v=yud8Hd4-QeY" target="_blank" style="display:block; text-decoration:none;">
+            <div class="story-video-placeholder" style="cursor:pointer;">
+              <img src="../Fotos/Tjarno/Saltando%20tjarno.gif" alt="Expedition documentary video" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
             </div>
-            <div class="story-image-placeholder">
-              <span class="placeholder-text"><i class="fas fa-microscope"></i> Lab processing</span>
+          </a>
+          <div class="story-media-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:0.75rem;">
+            <div class="story-image-placeholder" style="border-radius:12px;overflow:hidden;">
+              <img src="../Fotos/Tjarno/project%20area%201.png" alt="Project area" class="lightbox-trigger" data-full="../Fotos/Tjarno/project%20area%201.png" style="width:100%;height:100%;object-fit:cover;cursor:pointer;">
             </div>
-            <div class="story-image-placeholder">
-              <span class="placeholder-text"><i class="fas fa-map"></i> Navigation</span>
-            </div>
-            <div class="story-image-placeholder">
-              <span class="placeholder-text"><i class="fas fa-users"></i> Team</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECTION 3: Science Communication ===== -->
-  <section class="story-section alt">
-    <div class="story-container">
-      <div class="story-header">
-        <h2>Science Communication</h2>
-        <p class="story-subtitle">Exploring how marine science can reach broader audiences through storytelling and communication.</p>
-        <div class="story-divider"></div>
-      </div>
-      <div class="story-body">
-        <div class="story-text">
-          <p>Alongside field and laboratory work, I actively communicate marine science through LinkedIn and other professional platforms.</p>
-          <p>My writing focuses on marine conservation, expedition experiences, cetacean research, emerging technologies, blue biotechnology and ocean governance.</p>
-          <p>The objective is simple: translate complex scientific concepts into clear and engaging stories that connect research with society, decision-makers and future ocean professionals.</p>
-          <div class="story-links">
-            <a href="#" class="story-link"><i class="fab fa-linkedin"></i> LinkedIn Posts</a>
-            <a href="#" class="story-link story-link-outline"><i class="fas fa-external-link-alt"></i> External Articles</a>
-          </div>
-        </div>
-        <div class="story-media">
-          <div class="story-media-grid">
-            <div class="story-image-placeholder">
-              <span class="placeholder-text"><i class="fab fa-linkedin"></i> LinkedIn post</span>
-            </div>
-            <div class="story-image-placeholder">
-              <span class="placeholder-text"><i class="fab fa-linkedin"></i> LinkedIn post</span>
-            </div>
-            <div class="story-image-placeholder">
-              <span class="placeholder-text"><i class="fas fa-newspaper"></i> Article</span>
-            </div>
-            <div class="story-image-placeholder">
-              <span class="placeholder-text"><i class="fas fa-newspaper"></i> Article</span>
+            <div class="story-image-placeholder" style="border-radius:12px;overflow:hidden;">
+              <div class="slideshow-container" id="labSlideshow">
+                <img src="../Fotos/Tjarno/Estrella%20de%20mar%20lab%20tjarno%201.jpg" alt="Lab processing" data-full="../Fotos/Tjarno/Estrella%20de%20mar%20lab%20tjarno%201.jpg" class="active lightbox-trigger">
+                <img src="../Fotos/Tjarno/Estrella%20de%20mar%20tjarno%202.jpg" alt="Lab processing" data-full="../Fotos/Tjarno/Estrella%20de%20mar%20tjarno%202.jpg" class="lightbox-trigger">
+                <img src="../Fotos/Tjarno/Nudibranquio%20lab%20tjarno%201.jpg" alt="Lab processing" data-full="../Fotos/Tjarno/Nudibranquio%20lab%20tjarno%201.jpg" class="lightbox-trigger">
+                <img src="../Fotos/Tjarno/Nudibranquio%20lab%20tjarno%202.jpg" alt="Lab processing" data-full="../Fotos/Tjarno/Nudibranquio%20lab%20tjarno%202.jpg" class="lightbox-trigger">
+                <img src="../Fotos/Tjarno/Cuadrado%20tjarno%201.jpg" alt="Field sampling" data-full="../Fotos/Tjarno/Cuadrado%20tjarno%201.jpg" class="lightbox-trigger">
+                <img src="../Fotos/Tjarno/Recogida%20muestra%20tjarno%201.JPG" alt="Field sampling" data-full="../Fotos/Tjarno/Recogida%20muestra%20tjarno%201.JPG" class="lightbox-trigger">
+                <div class="slideshow-dots">
+                  <div class="slideshow-dot active" data-index="0"></div>
+                  <div class="slideshow-dot" data-index="1"></div>
+                  <div class="slideshow-dot" data-index="2"></div>
+                  <div class="slideshow-dot" data-index="3"></div>
+                  <div class="slideshow-dot" data-index="4"></div>
+                  <div class="slideshow-dot" data-index="5"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -170,5 +208,80 @@
   </footer>
 
   <script src="../script.js"></script>
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <span class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</span>
+    <img src="" alt="" id="lightboxImg">
+    <span class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</span>
+  </div>
+
+  <script>
+    (function() {
+      const container = document.getElementById('labSlideshow');
+      if (!container) return;
+      const imgs = container.querySelectorAll('img');
+      const dots = container.querySelectorAll('.slideshow-dot');
+      let current = 0;
+      let timer = null;
+
+      function show(idx) {
+        imgs[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (idx + imgs.length) % imgs.length;
+        imgs[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      function next() { show(current + 1); }
+
+      function start() {
+        timer = setInterval(next, 2500);
+      }
+
+      dots.forEach(d => {
+        d.addEventListener('click', function() {
+          clearInterval(timer);
+          show(parseInt(this.dataset.index));
+          start();
+        });
+      });
+
+      start();
+    })();
+
+    (function() {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lightboxPrev = document.getElementById('lightboxPrev');
+      const lightboxNext = document.getElementById('lightboxNext');
+      let items = [];
+      let current = 0;
+
+      document.querySelectorAll('.lightbox-trigger').forEach(el => {
+        el.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const src = this.dataset.full || this.src;
+          const alt = this.alt || '';
+          items = Array.from(document.querySelectorAll('.lightbox-trigger')).map(t => ({ src: t.dataset.full || t.src, alt: t.alt }));
+          current = items.findIndex(i => i.src === src);
+          lightboxImg.src = items[current].src.replace(/ /g,'%20');
+          lightboxImg.alt = items[current].alt;
+          lightbox.classList.add('active');
+        });
+      });
+
+      lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+      lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+      lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); current = (current - 1 + items.length) % items.length; lightboxImg.src = items[current].src.replace(/ /g,'%20'); lightboxImg.alt = items[current].alt; });
+      lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); current = (current + 1) % items.length; lightboxImg.src = items[current].src.replace(/ /g,'%20'); lightboxImg.alt = items[current].alt; });
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') lightbox.classList.remove('active');
+        if (e.key === 'ArrowLeft') { current = (current - 1 + items.length) % items.length; lightboxImg.src = items[current].src.replace(/ /g,'%20'); lightboxImg.alt = items[current].alt; }
+        if (e.key === 'ArrowRight') { current = (current + 1) % items.length; lightboxImg.src = items[current].src.replace(/ /g,'%20'); lightboxImg.alt = items[current].alt; }
+      });
+    })();
+  </script>
 </body>
 </html>

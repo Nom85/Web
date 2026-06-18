@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Reports — Fran Nomdedeu</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .report-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 4px solid #00b4d8;
+    }
+    .report-card h3 {
+      color: #0b3c5d;
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+    }
+    .report-card p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .report-card .report-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    .report-card .report-tag {
+      background: #e8f4f8;
+      color: #0b3c5d;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .report-card .report-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #00b4d8;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .report-card .report-link:hover {
+      color: #0077b6;
+    }
+    .report-card .report-key-points {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+    }
+    .report-card .report-key-points h4 {
+      font-size: 0.85rem;
+      color: #0b3c5d;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .report-card .report-key-points ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .report-card .report-key-points li {
+      font-size: 0.85rem;
+      color: #555;
+      padding: 0.2rem 0;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .report-card .report-key-points li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #00b4d8;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="../index/index.html" class="logo">Fran Nomdedeu</a>
+      <ul class="nav-links" id="navLinks">
+        
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../expeditions/expeditions.html">Expeditions</a></li>
+        <li><a href="../projects/projects.html">Projects</a></li>
+        <li><a href="media.html">Field Stories</a></li>
+        <li><a href="../cv/cv.html">Professional Profile</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:7rem;">
+    <div class="container">
+      <h2 class="section-title">LinkedIn Reports</h2>
+      <p class="story-intro">
+        Science communication posts from Madeira cetacean field operations — sharing knowledge about marine megafauna, research methods and ocean conservation.
+      </p>
+
+      <!-- Report 1 -->
+      <div class="report-card">
+        <h3>The "Finprint" — How Photo-ID Transforms Cetacean Research</h3>
+        <div class="report-tags">
+          <span class="report-tag">Photo-ID</span>
+          <span class="report-tag">Citizen Science</span>
+          <span class="report-tag">Happywhale</span>
+          <span class="report-tag">Marine Conservation</span>
+        </div>
+        <p>During work with the MARE-Madeira team, I learned how researchers identify each cetacean through Photo-ID — a powerful technique that uses the unique marks, scars and shape of dorsal fins or tail flukes to recognize individuals over time.</p>
+        <div class="report-key-points">
+          <h4>Key Insights</h4>
+          <ul>
+            <li>Every whale has a unique "finprint" — just like fingerprints</li>
+            <li>A clear image is a valuable data point, not just a beautiful picture</li>
+            <li>Platforms like Happywhale use AI to compare photos with global databases</li>
+            <li>Scientists can track migrations, behaviors and population health</li>
+          </ul>
+        </div>
+        <p>This experience showed me how a single photo can transform our understanding of the ocean. Citizen science platforms are democratizing cetacean research, allowing anyone with a camera to contribute to marine science.</p>
+        <a href="https://www.linkedin.com/posts/frannomdedeu_marinebiology-photoid-citizenscience-activity-7386652532359446528-uBdw" target="_blank" class="report-link"><i class="fab fa-linkedin"></i> View full post on LinkedIn</a>
+      </div>
+
+      <!-- Report 2 -->
+      <div class="report-card">
+        <h3>GPS Tracking & Bio-Residual Sampling — Tools Behind Cetacean Research</h3>
+        <div class="report-tags">
+          <span class="report-tag">GPS Tracking</span>
+          <span class="report-tag">Bio-Residual Sampling</span>
+          <span class="report-tag">Marine Megafauna</span>
+          <span class="report-tag">Research Methods</span>
+        </div>
+        <p>While working with the MARE-Madeira team, I had the opportunity to learn about two powerful research techniques: GPS/satellite tracking and the collection of bio-residual samples (hair, skin, trace fragments).</p>
+        <div class="report-key-points">
+          <h4>GPS/Satellite Tracking</h4>
+          <ul>
+            <li>Maps migration corridors and habitat use</li>
+            <li>Detects overlaps with shipping lanes and fishing activity</li>
+            <li>Improves conservation measure design</li>
+          </ul>
+        </div>
+        <div class="report-key-points">
+          <h4>Bio-Residual Sampling</h4>
+          <ul>
+            <li>Measures contaminant levels in marine organisms</li>
+            <li>Reveals diet and trophic position through analysis</li>
+            <li>Evaluates overall health via small biopsy samples</li>
+          </ul>
+        </div>
+        <p>Combining tracking data with biological samples allows researchers to move from observing patterns to understanding processes — asking not just where a whale goes, but why.</p>
+        <a href="https://www.linkedin.com/posts/frannomdedeu_marinescience-cetaceanresearch-oceanconservation-activity-7388840448934547456-7w0D" target="_blank" class="report-link"><i class="fab fa-linkedin"></i> View full post on LinkedIn</a>
+      </div>
+
+      <!-- Report 3 -->
+      <div class="report-card">
+        <h3>Identifying Whales by Their Blow — What the Spout Reveals</h3>
+        <div class="report-tags">
+          <span class="report-tag">Whale Watching</span>
+          <span class="report-tag">Field Identification</span>
+          <span class="report-tag">Marine Biology</span>
+          <span class="report-tag">Sperm Whale</span>
+        </div>
+        <p>Out at sea, sometimes you don't see the fin or the tail. Only a burst of mist rising from the surface. That moment — the blow — reveals more than you think. Marine observers use these subtle differences to identify species even from miles away.</p>
+        <div class="report-key-points">
+          <h4>Types of Blows</h4>
+          <ul>
+            <li><strong>Rorqual whales</strong> (blue, fin, humpback): tall, straight column — can reach 9+ meters</li>
+            <li><strong>Right whales:</strong> distinctive V-shaped spout from two widely-separated blowholes</li>
+            <li><strong>Sperm whales:</strong> angled blow, ~45° to the left — because their single blowhole sits asymmetrically on the left side of the head</li>
+          </ul>
+        </div>
+        <p>Next time you see a puff on the horizon, remember: that's not just air — it's a clue to who's breathing beneath the waves.</p>
+        <a href="https://www.linkedin.com/posts/frannomdedeu_marinebiology-cetaceans-whalewatching-activity-7391369111496196097-LeW8" target="_blank" class="report-link"><i class="fab fa-linkedin"></i> View full post on LinkedIn</a>
+      </div>
+
+      <!-- Report 4 -->
+      <div class="report-card">
+        <h3>The Loggerhead Turtle — A Journey Home Guided by Earth's Magnetic Field</h3>
+        <div class="report-tags">
+          <span class="report-tag">Caretta caretta</span>
+          <span class="report-tag">Marine Conservation</span>
+          <span class="report-tag">Sea Turtles</span>
+          <span class="report-tag">Biodiversity</span>
+        </div>
+        <p><em>Caretta caretta</em> can travel more than 12,000 km from the shores where it hatches to the very same spot where it returns decades later to lay its eggs — guided only by the Earth's magnetic field. No compass, no GPS.</p>
+        <div class="report-key-points">
+          <h4>Loggerhead Turtle Facts</h4>
+          <ul>
+            <li>Can dive over 200 meters and stay underwater for up to 4 hours</li>
+            <li>Only 1 in every 1,000 hatchlings reaches adulthood</li>
+            <li>Play a key role in maintaining the health of sandy seabeds</li>
+            <li>Common threats: boat strikes and floating debris</li>
+          </ul>
+        </div>
+        <p>Watching a <em>Caretta caretta</em> is a lesson in patience and resilience. In a world dominated by speed and noise, creatures like sea turtles remind us that success lies in consistency.</p>
+        <a href="https://www.linkedin.com/posts/frannomdedeu_marineconservation-carettacaretta-oceans-activity-7393905826362556416-JZP7" target="_blank" class="report-link"><i class="fab fa-linkedin"></i> View full post on LinkedIn</a>
+      </div>
+
+      <!-- Report 5 -->
+      <div class="report-card">
+        <h3>The Most Elusive Cetacean — Cuvier's Beaked Whale</h3>
+        <div class="report-tags">
+          <span class="report-tag">Ziphius cavirostris</span>
+          <span class="report-tag">Beaked Whale</span>
+          <span class="report-tag">Deep Diving</span>
+          <span class="report-tag">World Record</span>
+        </div>
+        <p>The most elusive cetacean in the ocean: <em>Ziphius cavirostris</em> (Cuvier's beaked whale). Three silent individuals appeared during fieldwork in Madeira — a species that holds two remarkable world records.</p>
+        <div class="report-key-points">
+          <h4>World Records</h4>
+          <ul>
+            <li><strong>Deepest dive</strong> ever recorded for a mammal: <strong>2,992 m</strong></li>
+            <li><strong>Longest time underwater</strong>: up to <strong>3h 42min</strong></li>
+          </ul>
+        </div>
+        <div class="report-key-points">
+          <h4>Why So Elusive?</h4>
+          <ul>
+            <li>Live in small groups</li>
+            <li>Extremely elusive behavior</li>
+            <li>Spend most of their lives in deep offshore waters</li>
+            <li>Scars and marks from competition, cephalopod interactions, and parasites accumulate with age</li>
+          </ul>
+        </div>
+        <p>Hoping to cross paths with them again someday.</p>
+        <a href="https://www.linkedin.com/posts/frannomdedeu_%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%97%BA%F0%9D%97%BC%F0%9D%98%80%F0%9D%98%81-%F0%9D%97%B2%F0%9D%97%B9%F0%9D%98%82%F0%9D%98%80%F0%9D%97%B6%F0%9D%98%83%F0%9D%97%B2-%F0%9D%97%B0%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%AE%F0%9D%97%B0-activity-7396442541107318785-b_jL" target="_blank" class="report-link"><i class="fab fa-linkedin"></i> View full post on LinkedIn</a>
+      </div>
+
+      <!-- Report 6 -->
+      <div class="report-card">
+        <h3>The Dolphin Almost No One Knows — Steno bredanensis</h3>
+        <div class="report-tags">
+          <span class="report-tag">Steno bredanensis</span>
+          <span class="report-tag">Rough-toothed Dolphin</span>
+          <span class="report-tag">Biodiversity</span>
+          <span class="report-tag">Deep Water Species</span>
+        </div>
+        <p>You've probably never seen it. Yet <em>Steno bredanensis</em> roams tropical and subtropical seas all around the planet. It lives far from the coast, in deep waters (1,500–2,000 meters), forming groups of 10–30 individuals.</p>
+        <div class="report-key-points">
+          <h4>What Makes It Unique</h4>
+          <ul>
+            <li><strong>Only living member</strong> of the <em>Steno</em> genus — an evolutionary rarity</li>
+            <li>Rough-surfaced teeth (20–27 per jaw) with visible ridges — designed to grip prey at depth</li>
+            <li>Head profile unlike any other dolphin — no typical forehead, blends into a long narrow beak</li>
+            <li>Dark grey back, pinkish-white belly; coloration becomes yellowish with age</li>
+          </ul>
+        </div>
+        <p>This is why it remains so mysterious — its preference for deep waters makes it incredibly difficult to study.</p>
+        <a href="https://www.linkedin.com/posts/frannomdedeu_marinelife-cetaceans-biodiversity-activity-7401521004356747264-pQmg" target="_blank" class="report-link"><i class="fab fa-linkedin"></i> View full post on LinkedIn</a>
+      </div>
+
+      <!-- Report 7 -->
+      <div class="report-card">
+        <h3>Why Do Cetaceans Really Jump?</h3>
+        <div class="report-tags">
+          <span class="report-tag">Wildlife Behavior</span>
+          <span class="report-tag">Cetacean Ecology</span>
+          <span class="report-tag">Science Communication</span>
+          <span class="report-tag">Marine Biology</span>
+        </div>
+        <p>It's not just a method of movement — each type of jump serves a different function. Cetaceans don't jump to entertain us. They jump to communicate, compete, survive, and learn.</p>
+        <div class="report-key-points">
+          <h4>Reasons Cetaceans Jump</h4>
+          <ul>
+            <li><strong>Energy efficiency:</strong> Small cetaceans alternate swimming and jumping; bow-riding can reduce respiratory rate by up to 45%</li>
+            <li><strong>Long-distance communication:</strong> A humpback breach creates an acoustic signal traveling kilometers underwater</li>
+            <li><strong>Parasite removal:</strong> The impact against the water surface dislodges ectoparasites</li>
+            <li><strong>Territory and display:</strong> During breeding, males breach to demonstrate physical condition</li>
+            <li><strong>Play and learning:</strong> Calves practice motor skills; mothers and young strengthen bonds through play</li>
+          </ul>
+        </div>
+        <a href="https://www.linkedin.com/posts/frannomdedeu_marinebiology-oceanscience-cetaceans-activity-7404058474361274368-WDjg" target="_blank" class="report-link"><i class="fab fa-linkedin"></i> View full post on LinkedIn</a>
+      </div>
+
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="../expeditions/expeditions.html" class="btn">← Back to Expeditions</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Fran Nomdedeu · Marine Scientist · Expedition Operations · Blue Biotechnology</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
